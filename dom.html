@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Color Change</title>
+  <style>
+    .card {
+      width: 250px;
+      margin: 100px auto;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    img {
+      width: 100%;
+      border: 3px solid transparent;
+    }
+
+    .colors button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img id="imgChange" src="./oneImage.png" alt="Headphone">
+
+    <h3>Wireless Headphone</h3>
+
+    <div class="colors">
+      <button id="blackBtn">Black</button>
+      <button id="redBtn">Red</button>
+      <button id="blueBtn">Blue</button>
+    </div>
+  </div>
+
+  <script>
+    const imgElmt = document.querySelector("#imgChange");
+
+    document.querySelector("#blackBtn").addEventListener("click", () => {
+      imgElmt.setAttribute("src", "./oneImage.png");
+      imgElmt.style.border = "3px solid black";
+    });
+
+    document.querySelector("#redBtn").addEventListener("click", () => {
+      imgElmt.setAttribute("src", "./redHeadphone.jpg");
+      imgElmt.style.border = "3px solid red";
+    });
+
+    document.querySelector("#blueBtn").addEventListener("click", () => {
+      imgElmt.setAttribute("src", "./blueHeadphone.jpg");
+      imgElmt.style.border = "3px solid blue";
+    });
+  </script>
+
+</body>
+</html>
